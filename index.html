@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script type="text/javascript">
+'use strict'
+const hihihi = {
+  sign: 'Я тебя люблю',
+}
+const Stepa = {
+  match: 0,
+
+}
+const q1 = {
+q: 'Дата моего рождения? Введи цифорку',
+a1: '1) 15 марта',
+a2: '2) 16 марта',
+a3: '3) 17 марта',
+a4: '4) 18 марта',
+}
+const q2 = {
+q2: 'Мой любимый цвет? Введи цифорку',
+a12: '1) фиолетовый',
+a22: '2) бирюзовый',
+a32: '3) красный',
+a42: '4) синий',
+}
+const q3 = {
+q2: 'Любимый актер? Введи цифорку',
+a12: '1) Рами Малек',
+a22: '2) Дженсен Эклз',
+a32: '3) Джаред Падалеки',
+a42: '4) Илон Маск',
+}
+const q4 = {
+q2: 'Что я сейчас хочу больше всего? Введи цифорку',
+a12: '1) Камамбер',
+a22: '2) Кукумбер',
+a32: '3) Камбертеч',
+a42: '4) 4len',
+}
+const q5 = {
+q2: 'Сколько часов в день я сплю сейчас? Введи цифорку',
+a12: '1) 6',
+a22: '2) 8',
+a32: '3) 11',
+a42: '4) не сплю ',
+}
+let answer1, answer2, answer3, answer5, answer4;
+const game = {
+  q1, q2, q3, q4, q5,
+  Stepa,
+
+
+  run() {
+    alert('Добрый вечер. У меня есть пару вопросов))');
+    answer1 = +prompt(`${this.q1.q} \n ${this.q1.a1} \n ${this.q1.a2} \n ${this.q1.a3} \n ${this.q1.a4}`);
+
+    switch (answer1) {
+      case 3:
+      this.Stepa.match++;
+        break;
+      default:
+    }
+
+    answer2 = +prompt(`${this.q2.q2} \n ${this.q2.a12} \n ${this.q2.a22} \n ${this.q2.a32} \n ${this.q2.a42}`);
+
+    switch (answer2) {
+      case 3:
+      this.Stepa.match++;
+        break;
+      default:
+    }
+
+    answer3 = +prompt(`${this.q3.q2} \n ${this.q3.a12} \n ${this.q3.a22} \n ${this.q3.a32} \n ${this.q3.a42}`);
+
+    switch (answer3) {
+      case 1:
+      this.Stepa.match++;
+        break;
+      default:
+    }
+
+    answer4 = +prompt(`${this.q4.q2} \n ${this.q4.a12} \n ${this.q4.a22} \n ${this.q4.a32} \n ${this.q4.a42}`);
+
+    switch (answer4) {
+      case 4:
+      this.Stepa.match++;
+        break;
+      default:
+    }
+
+    answer5 = +prompt(`${this.q5.q2} \n ${this.q5.a12} \n ${this.q5.a22} \n ${this.q5.a32} \n ${this.q5.a42}`);
+
+    switch (answer5) {
+      case 3:
+      this.Stepa.match++;
+        break;
+      default:
+    }
+    switch (this.Stepa.match) {
+      case 5:
+      alert(`Ладно, я тоже тебя люблю. <3 \n ${this.Stepa.match}/5`);
+        break;
+        case 4:
+        alert(`Обидно было \n ${this.Stepa.match}/5`);
+          break;
+          case 3:
+          alert(`Кукумбер \n ${this.Stepa.match}/5`);
+            break;
+            case 2:
+            alert(`Ну я с тобой не разговариваю получается \n ${this.Stepa.match}/5`);
+              break;
+              case 1:
+              alert(`Получается бан \n ${this.Stepa.match}/5`);
+                break;
+      default:
+  // if (this.Stepa.match === 5) {
+  //   alert(`Ладно, я тоже тебя люблю. <3 \n ${this.Stepa.match}`);
+  // }
+}
+}
+}
+game.run();
+</script>
+  </body>
+</html>
